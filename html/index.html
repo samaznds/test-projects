@@ -1,40 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Toggle and Target Example</title>
-  <style>
-    .toggle-button {
-      padding: 10px;
-      margin: 10px;
-      background-color: #3498db;
-      color: #fff;
-      cursor: pointer;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+.toggle-btn{
+background-color: rgb(231, 16, 16);
+color: rgb(8, 39, 39);
+padding: 1rem;
+margin: 2rem;
+cursor: pointer;
+border: none;
+ }
+.toggle-btn:hover{background-color: brown;}
 
-    .target-element {
-      display: none;
-      padding: 20px;
-      background-color: #ecf0f1;
-      margin-top: 10px;
-    }
-  </style>
+.target-element{
+display: none;
+margin: 1rem;
+padding: 2rem;
+background-color: antiquewhite;
+
+
+}
+</style>
+
+
 </head>
 <body>
+<button class="toggle-btn" onclick="ToggleTarget()">target</button>
+<div class="target-element" id="targetElement">this is toggle</div>
 
-  <button class="toggle-button" onclick="toggleTarget()">تاگل</button>
-  <div class="target-element" id="targetElement">
-    این المان مخفی است و با تاگل نمایش داده می‌شود.
-  </div>
+<script>
+function toggletarget(){
+var targetElement=document.getElementById("targetElement");
+targetElement.style.display=(targetElement.style.display==="none" ||targetElement.style.display===" ")?" block " : " none "
+}
 
-  <script>
-    // تاگل وضعیت المان مورد نظر
-    function toggleTarget() {
-      var targetElement = document.getElementById('targetElement');
-      targetElement.style.display = (targetElement.style.display === 'none' || targetElement.style.display === '') ? 'block' : 'none';
-    }
-  </script>
+
+
+</script>
+
 
 </body>
 </html>
